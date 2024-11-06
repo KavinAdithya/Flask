@@ -1,0 +1,60 @@
+{% extends "index.html" %}
+{% block title %}
+Sign in
+{% endblock %}
+{% block style %}
+    body {
+            background-color: #f7f7f7;
+        }
+        .signup-container {
+            max-width: 400px;
+            margin: 100px auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        .signup-header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .signup-header h2 {
+            color: #ff6347; /* Tomato color */
+            font-weight: bold;
+        }
+        .form-control:focus {
+            box-shadow: none;
+            border-color: #ff6347;
+        }
+        .btn-custom {
+            background-color: #ff6347;
+            color: white;
+            border: none;
+        }
+        .btn-custom:hover {
+            background-color: #e5533a;
+        }
+{% endblock %}
+{% block content %}
+    <div class="signup-container">
+    <div class="signup-header">
+        <h2>Create an Account</h2>
+    </div>
+    <form action = '/signup' method = 'post'>
+        <div class="form-group">
+            <label for="fullname">Full Name</label>
+            <input type="text" class="form-control" id="fullname" placeholder="Enter your full name" name = "name">
+        </div>
+        <div class="form-group">
+            <label for="email">Email address</label>
+            <input type="email" class="form-control" id="email" placeholder="Enter your email" name = "email">
+        </div>
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" class="form-control" id="password" placeholder="Create a password" name = "password">
+        </div>
+        <button type="submit" class="btn btn-custom btn-block">Sign Up</button>
+        <p class="text-center mt-3">Already have an account? <a href={{url_for('auth.login')}}>Login</a></p>
+    </form>
+</div>
+{% endblock %}
