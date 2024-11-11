@@ -4,27 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8e057c05-8b5a-4969-8b45-fa8bcd2e0e58" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/FlaskWorkout.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PractiseFlask/WorkDriver.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PractiseFlask/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WorkoutProject/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WorkoutProject/app.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WorkoutProject/auth.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WorkoutProject/main.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WorkoutProject/templates/Signin.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WorkoutProject/templates/home.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WorkoutProject/templates/homepage.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WorkoutProject/templates/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WorkoutProject/templates/login.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WorkoutProject/templates/logout.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WorkoutProject/templates/profiles.html" afterDir="false" />
+    <list default="true" id="8e057c05-8b5a-4969-8b45-fa8bcd2e0e58" name="Changes" comment="Learning flask framework and building push up tracker web application using flask framework">
+      <change afterPath="$PROJECT_DIR$/WorkoutProject/DBManipulate.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WorkoutProject/extensions.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WorkoutProject/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WorkoutProject/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/WorkoutProject/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WorkoutProject/auth.py" beforeDir="false" afterPath="$PROJECT_DIR$/WorkoutProject/auth.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WorkoutProject/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/WorkoutProject/templates/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,14 +21,26 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
         <option value="HTML File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;KavinAdithya&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/KavinAdithya/Flask.git&quot;,
+    &quot;accountId&quot;: &quot;7d5cf839-e3d5-40ca-9289-7a0c1979fa83&quot;
+  }
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 2
 }</component>
@@ -54,8 +53,10 @@
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;Python.DBManipulate.executor&quot;: &quot;Run&quot;,
     &quot;Python.WorkDriver.executor&quot;: &quot;Run&quot;,
     &quot;Python.app.executor&quot;: &quot;Run&quot;,
+    &quot;Python.models.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;
   }
@@ -70,6 +71,28 @@
     </key>
   </component>
   <component name="RunManager" selected="Python.app">
+    <configuration name="DBManipulate" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="FlaskWorkout" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/WorkoutProject" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/WorkoutProject/DBManipulate.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="WorkDriver" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="FlaskWorkout" />
       <option name="ENV_FILES" value="" />
@@ -114,9 +137,33 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="models" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="FlaskWorkout" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/WorkoutProject" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/WorkoutProject/models.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Python.app" />
+        <item itemvalue="Python.models" />
+        <item itemvalue="Python.DBManipulate" />
         <item itemvalue="Python.WorkDriver" />
       </list>
     </recent_temporary>
@@ -137,6 +184,19 @@
       <option name="presentableId" value="Default" />
       <updated>1730796555246</updated>
     </task>
+    <task id="LOCAL-00001" summary="Learning flask framework and building push up tracker web application using flask framework">
+      <option name="closed" value="true" />
+      <created>1730890453037</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1730890453037</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Learning flask framework and building push up tracker web application using flask framework" />
+    <option name="LAST_COMMIT_MESSAGE" value="Learning flask framework and building push up tracker web application using flask framework" />
   </component>
 </project>
