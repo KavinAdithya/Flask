@@ -1,13 +1,25 @@
-from flask import Flask, render_template
+from flask import Flask
 from WorkoutProject.extensions import db
 from sqlalchemy import text
+from flask_login import LoginManager
 
 app = Flask(__name__)
 
 app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://flaskuser:Kavin%403@localhost/flask_pushup'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['SQLALCHEMY_ECHO'] = True
+app.config['SECRET_KEY'] = 'secret_key'
+
 db.init_app(app)
+
+login_manager = LoginManager()
+login_manager.login_view = 'auth.login'
+login_manager.init_app(app)
+
+@login_manager.user_loader
+def load_user(user_id):
+    from WorkoutProject.models import User
+    return User.query.get(int(user_id))
 
 from WorkoutProject.main import main as main_blueprint
 app.register_blueprint(main_blueprint)
