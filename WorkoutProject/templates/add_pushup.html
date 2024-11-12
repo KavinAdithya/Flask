@@ -1,0 +1,79 @@
+{% extends "index.html" %}
+{% block title %}
+Push Ups List
+{% endblock %}
+{% block style %}
+        body {
+            background-color: #f1f1f1;
+        }
+        .container {
+            margin-top: 50px;
+        }
+        h1 {
+            color: #d9534f;
+            font-weight: bold;
+        }
+        .btn-primary {
+            background-color: #d9534f;
+            border-color: #d9534f;
+        }
+        .btn-primary:hover {
+            background-color: #c9302c;
+            border-color: #ac2925;
+        }
+        .btn-warning {
+            background-color: #f0ad4e;
+            border-color: #f0ad4e;
+        }
+        .btn-warning:hover {
+            background-color: #ec971f;
+            border-color: #d58512;
+        }
+        .btn-danger {
+            background-color: #d9534f;
+            border-color: #d9534f;
+        }
+        .btn-danger:hover {
+            background-color: #c9302c;
+            border-color: #ac2925;
+        }
+        .card-header {
+            background-color: #d9534f;
+            color: white;
+        }
+        .table-striped tbody tr:nth-of-type(odd) {
+            background-color: rgba(217, 83, 79, 0.05);
+        }
+        .table-hover tbody tr:hover {
+            background-color: rgba(217, 83, 79, 0.1);
+        }
+{% endblock %}
+{% block content %}
+<div class="container">
+    <h1 class="text-center mb-4">Push-ups Tracker</h1>
+
+    <!-- Form for adding push-ups -->
+    <div class="card">
+        <div class="card-header">
+            <h4>Add Push-ups</h4>
+        </div>
+        <div class="card-body">
+            <form id="pushupForm">
+                <div class="mb-3">
+                    <label for="datetime" class="form-label">Date</label>
+                    <input type="datetime-local" name= "date" class="form-control" id="datetime" required>
+                </div>
+                <div class="mb-3">
+                    <label for="count" class="form-label">Number of Push-ups</label>
+                    <input type="number" class="form-control" id="count" min="1" name = "count" required>
+                </div>
+                <div class="mb-3">
+                    <label for="comments" class="form-label">Comments (Optional)</label>
+                    <textarea class="form-control" id="comments" rows="3" name = "comment" placeholder="Add any comments..."></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Add Push-ups</button>
+            </form>
+        </div>
+    </div>
+    </div>
+{% endblock %}
