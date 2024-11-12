@@ -4,13 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8e057c05-8b5a-4969-8b45-fa8bcd2e0e58" name="Changes" comment="Learn about the flask login authentication and implemented in my pushup project">
-      <change afterPath="$PROJECT_DIR$/WorkoutProject/templates/add_pushup.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WorkoutProject/templates/workouts.html" afterDir="false" />
+    <list default="true" id="8e057c05-8b5a-4969-8b45-fa8bcd2e0e58" name="Changes" comment="Working on read and add worlout feature in push up application">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WorkoutProject/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/WorkoutProject/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WorkoutProject/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/WorkoutProject/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WorkoutProject/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/WorkoutProject/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WorkoutProject/templates/profiles.html" beforeDir="false" afterPath="$PROJECT_DIR$/WorkoutProject/templates/profiles.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -215,13 +211,22 @@
       <option name="project" value="LOCAL" />
       <updated>1731382700408</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Working on read and add worlout feature in push up applicationk">
+      <option name="closed" value="true" />
+      <created>1731393018216</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1731393018216</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Learning flask framework and building push up tracker web application using flask framework" />
     <MESSAGE value="Working on mysql database with flask" />
     <MESSAGE value="Learn about the flask login authentication and implemented in my pushup project" />
-    <option name="LAST_COMMIT_MESSAGE" value="Learn about the flask login authentication and implemented in my pushup project" />
+    <MESSAGE value="Working on read and add worlout feature in push up application" />
+    <option name="LAST_COMMIT_MESSAGE" value="Working on read and add worlout feature in push up application" />
   </component>
 </project>
