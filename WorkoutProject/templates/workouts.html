@@ -47,7 +47,7 @@ body {
 <div class="container">
     <h1 class="text-center mb-4">Workout List</h1>
 
-    {{ for user in name}}
+    {% for n in name %}
 
 
     <div class="row" id="workoutList">
@@ -58,10 +58,10 @@ body {
                     Push-ups
                 </div>
                 <div class="card-body">
-                    <p><strong>Date:</strong> {{user.datetime}}</p>
-                    <p><strong>Pushups:</strong> {{user.count}}</p>
-                    <p><strong>Comments:</strong> {{user.comment}}</p>
-                    <a href="#" class="btn btn-info">Edit Workout</a>
+                    <p><strong>Date : </strong> {{n.date_time}}</p>
+                    <p><strong>Pushups : </strong> {{n.count}}</p>
+                    <p><strong>Comments : </strong> {{n.comment}}</p>
+                    <a href="{{url_for('main.update_push_up', workout_id = n.id)}}" class="btn btn-info">Edit Workout</a>
                     <a href="#" class="btn btn-danger">Delete Workout</a>
                 </div>
             </div>
@@ -69,7 +69,7 @@ body {
 
 
     </div>
-    {% end for %}
+    {% endfor %}
 </div>
 
 <!-- Bootstrap JS and Popper.js -->

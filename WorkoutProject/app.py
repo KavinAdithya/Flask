@@ -28,7 +28,7 @@ from WorkoutProject.auth import auth as auth_blueprint
 app.register_blueprint(auth_blueprint)
 
 def data_base():
-    from WorkoutProject.models import User
+    from WorkoutProject.models import User, Workouts
     db.create_all()
     print('Table Created...')
 

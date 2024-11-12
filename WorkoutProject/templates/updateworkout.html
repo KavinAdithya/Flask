@@ -52,13 +52,17 @@ Push Ups List
 <div class="container">
     <h1 class="text-center mb-4">Push-ups Tracker</h1>
 
-
+    <h2>
+        <p>
+            Update Workouts
+        </p>
+    </h2>
     <div class="card">
         <div class="card-header">
             <h4>Add Push-ups</h4>
         </div>
         <div class="card-body">
-            <form id="pushupForm" action = "/addpushup" method = 'POST'>
+            <form id="pushupForm" action = "{{url_for('main.update_push_up', workout_id = workout_id)}}" method = 'POST'>
                 <div class="mb-3">
                     <label for="datetime" class="form-label">Date</label>
                     <input type="datetime-local" name= "datetime" class="form-control" id="datetime" required>
