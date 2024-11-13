@@ -58,11 +58,12 @@ body {
                     Push-ups
                 </div>
                 <div class="card-body">
-                    <p><strong>Date : </strong> {{n.date_time}}</p>
-                    <p><strong>Pushups : </strong> {{n.count}}</p>
-                    <p><strong>Comments : </strong> {{n.comment}}</p>
+                    <p><strong style = "margin-right:78px;">ID  </strong> <strong>:</strong> {{n.id}}</p>
+                    <p><strong style = "margin-right:60px;">Date </strong> <strong>:</strong> {{n.date_time}}</p>
+                    <p><strong style = "margin-right:33px;">Pushups </strong> <strong>:</strong> {{n.count}}</p>
+                    <p><strong style = "margin-right:15px;">Comments </strong> <strong>:</strong> {{n.comment}}</p>
                     <a href="{{url_for('main.update_push_up', workout_id = n.id)}}" class="btn btn-info">Edit Workout</a>
-                    <a href="#" class="btn btn-danger">Delete Workout</a>
+                    <a href="{{url_for('main.delete_workout', workout_id = n.id)}}" class="btn btn-danger">Delete Workout</a>
                 </div>
             </div>
         </div>

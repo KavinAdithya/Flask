@@ -1,7 +1,9 @@
 from datetime import datetime
-from flask import Blueprint, render_template, request, url_for
+from flask import Blueprint, render_template, request, url_for, session
 from flask_login import login_required, current_user
 from werkzeug.utils import redirect
+
+
 
 main = Blueprint('main', __name__)
 
@@ -66,3 +68,14 @@ def update_push_up(workout_id):
 
         return redirect(url_for('main.workouts'))
     return render_template('updateworkout.html', workout_id = workout_id)
+
+@main.route('/delete/<int:workout_id>/delete_workout')
+@login_required
+def delete_workout(workout_id):
+    from WorkoutProject.models import Workouts
+    from WorkoutProject.app import db
+    workout = Workouts.query.get(workout_id)
+    db.session.delete(workout)
+    db.session.commit()
+
+    return redirect(url_for('main.workouts'))

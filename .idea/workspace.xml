@@ -4,13 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8e057c05-8b5a-4969-8b45-fa8bcd2e0e58" name="Changes" comment="Working on read and add worlout feature in push up application">
-      <change afterPath="$PROJECT_DIR$/WorkoutProject/templates/updateworkout.html" afterDir="false" />
+    <list default="true" id="8e057c05-8b5a-4969-8b45-fa8bcd2e0e58" name="Changes" comment="Create Read and update operation features are developed">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WorkoutProject/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/WorkoutProject/app.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WorkoutProject/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/WorkoutProject/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WorkoutProject/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/WorkoutProject/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WorkoutProject/templates/add_pushup.html" beforeDir="false" afterPath="$PROJECT_DIR$/WorkoutProject/templates/add_pushup.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WorkoutProject/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/WorkoutProject/templates/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WorkoutProject/templates/workouts.html" beforeDir="false" afterPath="$PROJECT_DIR$/WorkoutProject/templates/workouts.html" afterDir="false" />
     </list>
@@ -241,7 +237,15 @@
       <option name="project" value="LOCAL" />
       <updated>1731398716531</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Create Read and update operation features are developed">
+      <option name="closed" value="true" />
+      <created>1731410375183</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1731410375183</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -249,6 +253,7 @@
     <MESSAGE value="Working on mysql database with flask" />
     <MESSAGE value="Learn about the flask login authentication and implemented in my pushup project" />
     <MESSAGE value="Working on read and add worlout feature in push up application" />
-    <option name="LAST_COMMIT_MESSAGE" value="Working on read and add worlout feature in push up application" />
+    <MESSAGE value="Create Read and update operation features are developed" />
+    <option name="LAST_COMMIT_MESSAGE" value="Create Read and update operation features are developed" />
   </component>
 </project>
