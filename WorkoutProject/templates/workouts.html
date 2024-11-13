@@ -37,7 +37,7 @@ body {
             background-color: #31b0d5;
             border-color: #269abc;
         }
-
+         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 {% endblock %}
 
 
@@ -46,8 +46,16 @@ body {
 
 <div class="container">
     <h1 class="text-center mb-4">Workout List</h1>
-
-    {% for n in name %}
+    {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+        <div>
+            {% for category,mes in messages %}
+                <p class = "alert alert-{{ category }}" style = "color : navy; font-size : 30px;">{{ mes }}</p>
+            {% endfor %}
+        </div>
+    {% endif %}
+    {% endwith %}
+    {% for n in name.items %}
 
 
     <div class="row" id="workoutList">
@@ -73,7 +81,26 @@ body {
     {% endfor %}
 </div>
 
-<!-- Bootstrap JS and Popper.js -->
+<div style="display : grid; grid-template-columns : 1fr 3fr;">
+    {% if name.has_prev %}
+        <center  ><button style = "border : none; ">
+            <a href = "{{ url_for('main.workouts', page1 = name.prev_num)}}">Previous</a>
+        </button>
+        </center>
+    {% else %}
+        <center></center>
+    {% endif %}
+    {% if name.has_next %}
+    <center>
+        <button style = "border : none;" >
+        <a  href = "{{ url_for('main.workouts', page = name.next_num)}}">Next</a>
+        </button>
+    </center>
+    {% else %}
+        <center></center>
+    {% endif %}
+</div>
+
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
 

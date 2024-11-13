@@ -1,5 +1,5 @@
 from datetime import datetime
-from flask import Blueprint, render_template, request, url_for, session
+from flask import Blueprint, render_template, request, url_for, flash
 from flask_login import login_required, current_user
 from werkzeug.utils import redirect
 
@@ -25,7 +25,7 @@ def add_push_up():
 @login_required
 def add_push_up_post():
     from WorkoutProject.models import Workouts
-    from WorkoutProject.app import db
+    from app import db
 
     count: int = int(request.form.get('count'))
     comment: str = request.form.get('comment')
@@ -39,21 +39,26 @@ def add_push_up_post():
     db.session.add(work_out)
     db.session.commit()
 
-    return redirect(url_for('main.workouts'))
-    # return 'Added'
+    flash(current_user.username + " New Workout Added Successfully...", 'success')
+
+    return redirect(url_for('main.workouts', page = 1))
 
 @main.route('/listworkouts')
 @login_required
 def workouts():
-    from WorkoutProject.models import  User
-    return render_template("workouts.html", name = User.query.filter_by(email = current_user.email).first().workouts)
+    from WorkoutProject.models import  Workouts
 
+    page = request.args.get('page', 1, type = int)
+    per_page = 1
+
+    name = Workouts.query.paginate(page = page, per_page = per_page)
+    return render_template("workouts.html", name = name)
 
 @main.route('/update_push_up/<int:workout_id>/update', methods = ['GET', 'POST'])
 @login_required
 def update_push_up(workout_id):
     from WorkoutProject.models import Workouts
-    from WorkoutProject.app import db
+    from app import db
 
     if request.method == 'POST':
         count : int = int(request.form.get('count'))
@@ -66,16 +71,18 @@ def update_push_up(workout_id):
         workouts.date_time = date_time
         db.session.commit()
 
-        return redirect(url_for('main.workouts'))
+        flash('You Workout Has Been Updated !')
+        return redirect(url_for('main.workouts',page = 1))
     return render_template('updateworkout.html', workout_id = workout_id)
 
 @main.route('/delete/<int:workout_id>/delete_workout')
 @login_required
 def delete_workout(workout_id):
     from WorkoutProject.models import Workouts
-    from WorkoutProject.app import db
+    from app import db
     workout = Workouts.query.get(workout_id)
     db.session.delete(workout)
     db.session.commit()
 
-    return redirect(url_for('main.workouts'))
+    flash('Your Workour has been deleted successfully...', 'danger')
+    return redirect(url_for('main.workouts', page = 1))

@@ -1,5 +1,5 @@
 from flask import Blueprint, render_template, request, redirect, url_for
-from flask_login import login_user, logout_user, current_user, login_required
+from flask_login import login_user, logout_user, login_required
 
 auth = Blueprint('auth', __name__)
 
@@ -9,7 +9,7 @@ def signup():
 
 @auth.route('/signup', methods = ['post'])
 def signup_post():
-    from .app import db
+    from app import db
     from WorkoutProject.models import User
 
     name : str = request.form.get('name')
@@ -28,7 +28,6 @@ def login():
 
 @auth.route('/login', methods = ['post'])
 def login_post():
-    from app import db
     from WorkoutProject.models import  User
 
     email : str = request.form.get('name')

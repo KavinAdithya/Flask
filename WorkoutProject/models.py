@@ -3,7 +3,7 @@ from datetime import datetime
 from flask_login import UserMixin
 
 
-from WorkoutProject.app import db
+from app import db
 class User(db.Model, UserMixin):
 
     __table_args__ = {'extend_existing' : True}
